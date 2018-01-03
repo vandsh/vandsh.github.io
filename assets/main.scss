@@ -1,0 +1,24 @@
+---
+---
+
+@import "{{site.theme}}";
+
+.page-content{
+  background-image: url(/assets/concrete.jpg);
+  position: relative;
+
+  .wrapper{
+    padding-top: 30px;
+    background: #fdfdfd;
+  }
+
+}
+
+.site-title{
+  background-image: url(/assets/logo_small.png);
+  background-size: 40px 40px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 55px;
+}
+
