@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Useful CI/CD Snippets"
-categories: Sitecore CI-CD Powershell
+categories: Sitecore
+tags: Sitecore CI-CD Powershell
 ---
 
 Continuous Integration and Deployment is nothing new, and in the consulting space the amount of toolage we get to touch is pretty broad so we try to make things fairly universal.
