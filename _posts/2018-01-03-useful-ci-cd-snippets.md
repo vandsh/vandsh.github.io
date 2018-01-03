@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Useful CI/CD Snippets"
-categories: Sitecore
+category: Sitecore
 tags: Sitecore CI-CD Powershell
 ---
 
