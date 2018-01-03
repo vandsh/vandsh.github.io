@@ -20,5 +20,11 @@
   background-position: left center;
   background-repeat: no-repeat;
   padding-left: 55px;
+  white-space: nowrap;
+  overflow:hidden;
+  width: 80%
 }
 
+.site-nav{
+  z-index: 10;
+}
