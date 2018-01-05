@@ -11,7 +11,3 @@ Have been in the tech partner/consulting space most of those years, but have bee
 Kinda light currently, but some of my open source work is at GitHub:
 {% include icon-github.html username=site.github_username %}
 
-Twitter:
-{% twitter https://twitter.com/vandsh limit=5 widget_type=grid maxwidth=740 %}
-
-
