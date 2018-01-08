@@ -6,6 +6,24 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
+  <!-- Twitter Start -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@vandsh">
+  <meta name="twitter:title" content="{{ page.title }}">
+{% if page.description %}
+  <meta name="twitter:description" content="{{ page.meta_description }}">
+{% else %}
+  <meta name="twitter:description" content="{{ page.content | strip_html | xml_escape | truncate: 200 }}">
+{% endif %}
+
+{% if page.image.thumb %}
+  <meta name="twitter:image" content="{{ site.urlimg }}/{{ page.image.thumb }}">
+{% else %}
+  <meta name="twitter:image" content="{{ site.urlimg }}/assets/logo.png">
+{% endif %}
+  <!-- Twitter End -->
+
+
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
