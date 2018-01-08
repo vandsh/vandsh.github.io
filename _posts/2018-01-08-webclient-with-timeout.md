@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Powershell Webclient with Timeout"
+title: "Powershell WebClient with Timeout"
 category: Powershell
 tags: Sitecore CI-CD Powershell
 ---
