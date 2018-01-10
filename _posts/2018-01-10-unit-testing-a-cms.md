@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Unit in Testing Sitecore"
+title: "Unit Testing in Testing Sitecore"
 category: Sitecore
 tags: Sitecore Unit-Testing
 published: true
