@@ -1,17 +1,19 @@
 ---
 layout: post
-title: "Unit Testing Sitecore"
+title: "Unit in Testing Sitecore"
 category: Sitecore
 tags: Sitecore Unit-Testing
-published: false
+published: true
 ---
 
 Unit testing is a highly debated topic especially around the benefits versus the overhead costs and maintainence of said tests.  I am just going to toss out my 2 cents...
 
-### Prelude
+## Prelude
 Just some background to give some context on my thoughts, feel free to skip to the next section if you don't actually care.
 
 _Cues flashback animation_
+
+![alt text](/assets/gifs/flashback.gif "A long time ago")
 
 In a previous "enterprisey" life, I worked on a team that was diehards on code quality since everything we wrote was custom and ours.  We used the following flow for _every_ business ask:
 
@@ -22,30 +24,33 @@ In a previous "enterprisey" life, I worked on a team that was diehards on code q
 - [Selenium](http://www.seleniumhq.org/) used to smoke test the front end portions of the tests
 
 _Cues flashforward animation to current time_
+
+![alt text](/assets/gifs/forward.gif "Back to today...")
  
-After the enterprise world, I was thrust into the wonderful world of content management systems and consulting. A world where unit tests a bit more scrutinized for the following reasons:
+After the enterprise world, I was thrust into the wonderful world of content management systems and consulting. A world where unit tests were put under a microscope for the following reasons (not only by clients but by myself as well):
 
 - Cost of maintaining code that "just tests" is a lot to assume
 - Do we really need to test a commercial/community tested product _(and this is the hardest one to argue against)_
 - We have a tight budget and just want deliverables
 
-So given the above, it's been hard to sell the idea of unit tests until a recent Sitecore project forced me to reasses these notions.
+So given the above, it's been hard to sell the idea of unit tests until a recent Sitecore project forced me to reassess these notions.
 
-As part of an excercise, I went thru and tried to complete the following:
+## As part of an excercise, I completed the following:
 
-### Identify areas that were not considered out-of-box Sitecore
+### Identify areas not considered out-of-box Sitecore
 Focus on things that were clearly custom written by I or one of the other team members.  The key here was to assume that all pieces of Sitecore were either already tested or commercially supported in the even there _was_ a bug. Look soley at what we wrote that was not just putting fields in a rendering.
 
-For example, `Search`, yes Sitecore has search mechanisms, but when it comes to actual logic of the search itself, you end up writing most of it.
+For example, `Search`. Yes, Sitecore has search mechanisms, but when it comes to actual filtering and faceting logic of the search itself, you end up writing most of it.
 ```csharp
-//super basic service that contains opening a 
+//Super basic service that contains opening a 
 //ProviderSearchContext and closing all within the service
+//Most likely some PredicateBuilder logic to filter by template etc.
 var _searchService = new SearchService();
 _searchService.SiteSearch(query, pageSize, pageNumber);
 ```
 
 ### Lightly refactor things
-Clean up services and business logic to have their dependencies injected, code to interfaces and avoid static/extension methods as much as physically possible (this proved to be the most challenging)
+Clean up services and business logic to have their dependencies injected, code to interfaces:
 
 ```csharp
 //Abstract and inject the dependencies so we can mock all the underlying index and 
@@ -58,7 +63,8 @@ public SearchService(IProviderSearchContext searchContext,
 }
 ```
 
-Convert most if not all of the extension and static methods to be "helper" type classes that contain proper instances.
+Avoid static/extension methods as much as physically possible (this proved to be the most challenging).
+Convert most if not all of the extension and static methods to be "helper" type classes that contain proper instances (more easily mockable):
 
 ```csharp
 ((string)searchTagValue).GetTagItem();
@@ -69,7 +75,41 @@ var _tagHelper = new TagHelper(); //injected via constructor of course...
 ...
 _tagHelper.GetTagItem(searchTagValue);
 ```
-Converting these types of classes took a while since it both had to be refactored and injected (and since it was an extension method, it was used _a lot_).  But now that we converted it, and inside the method it was doing a `Sitecore.Database.GetItem` we can now mock it, eliminating the Sitecore call all together (or mock pieces of it using `Sitecore.FakeDb`).
+Now that we converted it, and inside the method it was doing a `Sitecore.Database.GetItem` we can now mock it effectively eliminating the Sitecore call all together (or mock pieces of it using `Sitecore.FakeDb`).
+Converting these types of classes took a while since they both had to be refactored and injected (and since it was an extension method, it was used _a lot_ at will). This did also include wrapping some `ContentSearch` extensions like `GetResults` and `Where` so they could be mocked against an `IEnumerable` instead of a proper `Lucene\Solr` index):
+
+```csharp
+public class FakeSearchExtensions : ISearchExtensions
+{
+    public SearchResults<TSource> GetResults<TSource>(IQueryable<TSource> source)
+    {
+        //Lazy test, simply casting since where executed predicate
+	Trace.Write("FakeSearchExtensions.GetResults");
+	var sourceList = source.AsEnumerable()
+            .Select(x => new SearchHit<TSource>(1, x));
+	var searchResults = new SearchResults<TSource>(sourceList, 
+            sourceList.Count(), null);
+	return searchResults;
+    }
+
+    public IQueryable<TSource> Where<TSource>(IQueryable<TSource> source, 
+        Expression<Func<TSource, bool>> predicate)
+    {
+	//Lazy test, not deferring the filter, execute immediately
+	Trace.Write("FakeSearchExtensions.Where");
+	var compiledQuery = predicate.Compile();
+	var queryExecuted = source.AsEnumerable().Where(compiledQuery).ToList();
+	return queryExecuted.AsQueryable();
+    }
+}
+
+///Elsewhere in solution...
+
+    var queryRunner = _searchExtensions.Where(_searchContextQueryable, baseQuery);
+    var results = _searchExtensions.GetResults(queryRunner);
+```
+
+As challenging as this was, it let me mock all the underlying search mechanisms and focus soley on the desired logic (faceting, filtering, and/ors, text searches etc.)
 
 ### Use what you know
 Moq, nUnit and Selenium were the weapons of choice based on familiarity, though there are many other standard tools I could have used.
@@ -142,11 +182,10 @@ tagHelper.GetTagItem("test1");
 _db.Dispose();
 ```
 
-
-### Findings
+## Findings
 After this enlightening exercise I concluded a few things:
 - No matter how well you know the code, when you start breaking things down into direct asks, you can find flaws in your own logic (which was surely the case here)
 - If I were to have broken up things into unit tests before ever writing a line of implementation code, I may have wrote things entirely different and would have been able to hand it off to _any_ other developer to tackle.
-- The compromise in unit testing a commercial CMS on _only what you write_ and trying to steer clear of _what's already provided_ is certainly achievable.
+- The compromise in unit testing a commercial CMS on _only what you write_ and trying to steer clear of _what's already provided_ is certainly attainable.
 
-I hope that some part of this exercise can help you as much as it has me in understanding the benefits of unit testing within a CMS and that there is a always going to be a fine line of "too far" and "just enough"
+I hope that some part of this exercise can help you as much as it has me in understanding the benefits of unit testing within a CMS and that there is a always going to be a fine line of "too far" and "just enough".
