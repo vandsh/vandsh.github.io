@@ -5,7 +5,7 @@ category: Sitecore
 tags: Sitecore Powershell SPE
 ---
 
-Every once and a while, I end up checking what fields on items are using their own defined values and which are using standard values.  I recently wrote the script below using [Sitecore Powershell Extensions](https://marketplace.sitecore.net/en/Modules/Sitecore_PowerShell_console.aspx).
+Every once and a while, I end up checking what fields on items have defined standard values.  I recently wrote the script below using [Sitecore Powershell Extensions](https://marketplace.sitecore.net/en/Modules/Sitecore_PowerShell_console.aspx).
 
 ### Get Fields using Standard Values
 ```powershell
