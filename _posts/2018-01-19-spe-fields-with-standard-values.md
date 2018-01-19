@@ -38,6 +38,7 @@ Name                                                         Value
 /Home/Words/Burrito               [Number of Returned Options: 3]
 ```
 
-My guess is it should probably turn into a report, but for now I will run it occasionally just as a sanity check.
+I may end up altering this to see if the current field value equals the standard value of the template (use case would be something along the lines of the `LayoutDeltaPropagator` as a SPE script).
+Who knows, maybe it will turn into a report, but for now I will run it occasionally just as a sanity check.
 
 `</end of post>`
