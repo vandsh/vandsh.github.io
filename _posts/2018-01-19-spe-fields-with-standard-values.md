@@ -23,7 +23,7 @@ Get-ChildItem $rootItem -Recurse | ForEach-Object {
     }
 }
 
-$hashTable| Format-Table -AutoSize
+$hashTable | Format-Table -AutoSize
 ```
 
 The above script will return something pretty basic like: 
