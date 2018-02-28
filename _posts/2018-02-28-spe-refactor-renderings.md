@@ -5,7 +5,7 @@ category: Sitecore
 tags: Sitecore Powershell SPE
 ---
 
-Recently I came across a site that needed some Project and Solution level refactoring.  Having needed to do this in the past, I was dreading having to go thru the `Controller Renderings` and having to update the values for the `Controller` and/or `Action` to match the new namespace.  Thankfully, using a very similar setup as I have in the past, I was able to pull this off easily using [Sitecore Powershell Extensions](https://marketplace.sitecore.net/en/Modules/Sitecore_PowerShell_console.aspx).
+Recently I came across a site that needed some Project and Solution level refactoring (ugh, namespace changes).  Having needed to do this in the past, I was dreading having to go thru the `Controller Renderings` and having to update the values for the `Controller` and/or `Action` to match the new namespace.  Thankfully, using a very similar setup as I have in the past, I was able to pull this off easily using [Sitecore Powershell Extensions](https://marketplace.sitecore.net/en/Modules/Sitecore_PowerShell_console.aspx).
 
 ### Batch Update Rendering Controllers
 ```powershell
