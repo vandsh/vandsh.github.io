@@ -100,7 +100,7 @@ The above script will return color coded output like so:
 
 SourceID                               Name         Value  SideIndicator
 --------                               -----        -----  -------------
-{96892835-46BF-437A-8C9E-40B12EC58881} Image Is Map ==     ==
+{96892835-46BF-437A-8C9E-40B12EC58881} Image Is Map false  == 
 {96892835-46BF-437A-8C9E-40B12EC58881} Is Header    true   =>
 {98D165DB-25EA-4E80-B9A3-ABCC181A9FAF} Is Header    false  <=
 
