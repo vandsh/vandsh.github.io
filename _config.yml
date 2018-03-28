@@ -16,7 +16,7 @@
 title: vandsh - breaker of things
 email: steve.vandenbush@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Jack of all trades, master of none? I love all things code but the main focus for me recently has been Content Management Systems 
+  Tech Lead at [GeekHive](geekhive.com). Jack of all trades, master of none? I love all things code but the main focus for me recently has been Content Management Systems 
   (Sitecore, Drupal, Wordpress, Kentico etc).  These are just some of my ramblings.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://vandsh.github.io" # the base hostname & protocol for your site, e.g. http://example.com

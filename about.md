@@ -4,8 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Not much to know, I have been developing since about 2009.
-Have been in the tech partner/consulting space most of those years, but have been in the enterprise world as well. Sitecore, Drupal and Kentico certified.  Enjoy challenging problems and have a knack for troubleshooting. Other interests outside of development are home automation, home security, networking and light robotics.
+Not much to know, I have been developing since about 2009/.
+Have been in the tech partner/consulting space most of those years (several at my current and awesome company [GeekHive](geekhive.com)), but have been in the enterprise world as well. Sitecore, Drupal and Kentico certified.  Enjoy challenging problems and have a knack for troubleshooting. Other interests outside of development are home automation, home security, networking and light robotics.
 
 ### Feeds
 
