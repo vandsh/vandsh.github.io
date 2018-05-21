@@ -25,7 +25,7 @@ Recently on a project doing a content migration, we were tasked with importing e
 	</user>
         <!-- countless other users below... -->
 ```
-The below script is essentially iterating over an xml file and creating new users (with a `Custom Profile` to store the properties nicely). 
+The below script is essentially iterating over the above xml file and creating new users (with a `Custom Profile` to store the properties nicely). 
 
 ### Upload and import users
 ```powershell
