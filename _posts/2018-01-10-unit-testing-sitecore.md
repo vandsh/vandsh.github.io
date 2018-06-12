@@ -38,7 +38,7 @@ So given the above, it's been hard to sell the idea of unit tests until a recent
 ## As part of an excercise, I completed the following:
 
 ### Identify areas not considered out-of-box Sitecore
-Focus on things that were clearly custom written by I or one of the other team members.  The key here was to assume that all pieces of Sitecore were either already tested or commercially supported in the even there _was_ a bug. Look soley at what we wrote that was not just putting fields in a rendering.
+Focus on things that were clearly custom written by I or one of the other team members.  The key here was to assume that all pieces of Sitecore were either already tested or commercially supported in the event there _was_ a bug. Look soley at what we wrote that was not just putting fields in a rendering.
 
 For example, `Search`. Yes, Sitecore has search mechanisms, but when it comes to actual filtering and faceting logic of the search itself, you end up writing most of it.
 ```csharp
