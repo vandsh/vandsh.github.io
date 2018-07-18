@@ -20,8 +20,8 @@
   <meta name="twitter:description" content="{{ page.content | strip_html | xml_escape | truncate: 200 }}">
 {% endif %}
 
-{% if page.image.thumb %}
-  <meta name="twitter:image" content="{{ site.url }}/{{ page.thumbnail }}">
+{% if page.image %}
+  <meta name="twitter:image" content="{{ site.url }}/{{ page.image }}">
 {% else %}
   <meta name="twitter:image" content="{{ site.url }}/assets/logo.png">
 {% endif %}
