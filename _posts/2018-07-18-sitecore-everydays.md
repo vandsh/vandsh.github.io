@@ -2,7 +2,7 @@
 layout: post
 title: "1 Year of Sitecore Everydays"
 category: Sitecore
-image: /assets/everyday.png
+image: /assets/everydays.png
 tags: Sitecore Twitter Community
 ---
 
