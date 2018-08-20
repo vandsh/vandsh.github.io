@@ -33,7 +33,7 @@ public class CustomProcessor
 		_globalSettingsLocation = globalSettingsLocation;
 		_siteRootTemplate = siteRootTemplate;
 	}
-	public void Process(HttpRequetsArgs args)
+	public void Process(HttpRequestArgs args)
 	{
 		//Do things with your important '_settingsTemplate' and '_siteRootTemplate' variables
 		//like GetItems or maybe check for an ancestor of a particular template type...
