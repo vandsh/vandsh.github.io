@@ -53,7 +53,7 @@ The actual prompt that shows when the script runs will look like:
 
 ![alt text](/assets/renderingSearchAndReplace.png "Rendering Search and Replace UI")
 
-So at face value, you can obviously change any of the properties of a `RenderingDefinition` with this script.  My hope for this long term is to allow people to not fear refactoring front end layouts (placeholders, datasources etc). Being able to swap out a new `placeholder` key for a `Rendering` or a new `Datasource` to a restructured content tree, really just trying to make the daunting easier to accomplish.
+So at face value, you can obviously change any of the properties of a `RenderingDefinition` with this script.  My hope for this long term is to allow people to not fear refactoring front end layouts (`Placeholders`, `Datasources` etc). Being able to swap out a new `placeholder` key for a `Rendering` or a new `Datasource` to a restructured content tree, really just trying to make the daunting easier to accomplish.
 
 Hope this helps!
 
