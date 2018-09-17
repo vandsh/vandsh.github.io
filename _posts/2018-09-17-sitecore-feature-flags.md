@@ -40,6 +40,10 @@ Should be as easy as:
 
 ### Screenshots ### 
 
+Video of usage:
+
+<iframe width="760" height="465" src="https://www.youtube.com/embed/8R5mU7lOWIs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 ![alt text](https://github.com/vandsh/sitecore-feature-flags/raw/master/moduleOptions.png "Module Options")
 
 ![alt text](https://github.com/vandsh/sitecore-feature-flags/raw/master/placeholderSettings.png "Placeholder Settings")
