@@ -38,11 +38,14 @@ Should be as easy as:
 
 1. When creating data items that may sit under a page type (think `About Us/_content/Hero`) you can leverage the `SiteInfo` macro in `Feature Flags` to block that item from being inserted using the standard `Insert Options` rule for specific sites if the module is not ready to be used.
 
-### Screenshots ### 
+### Video ### 
 
-Video of usage:
+Video of usage (creating a rule on the `placeholder setting` to remote the `Sample Rendering 2` component from all sites except for `Global`):
 
 <iframe width="760" height="465" src="https://www.youtube.com/embed/8R5mU7lOWIs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+### Screenshots ###
 
 ![alt text](https://github.com/vandsh/sitecore-feature-flags/raw/master/moduleOptions.png "Module Options")
 
