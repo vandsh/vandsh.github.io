@@ -44,6 +44,9 @@ Video of usage (creating a rule on the `placeholder setting` to remote the `Samp
 
 <iframe width="760" height="465" src="https://www.youtube.com/embed/8R5mU7lOWIs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
+Video of usage (creating a `Modules Options` folder with child items) that is referenced in the `Sample Item` template. Created rule excluding `Green Background` from everywhere _other_ than `Global`.
+
+<iframe width="760" height="465" src="https://www.youtube.com/embed/fPhw1trBxMI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ### Screenshots ###
 
