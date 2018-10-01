@@ -54,6 +54,6 @@ Video of usage (creating a `Modules Options` folder with child items) that is re
 
 ![alt text](https://github.com/vandsh/sitecore-feature-flags/raw/master/placeholderSettings.png "Placeholder Settings")
 
-Look for a more in-depth write up soon on [Geekhive's website](www.geekhive.com) and hopefully on [Marketplace](https://marketplace.sitecore.net/) as well.
+Look for a more in-depth write up soon on [Geekhive's website](https://www.geekhive.com) and hopefully on [Marketplace](https://marketplace.sitecore.net/) as well.
 
 Hope this helps!
