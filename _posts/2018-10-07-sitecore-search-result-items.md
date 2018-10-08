@@ -37,7 +37,7 @@ for($i = 0; $i -lt 5000; $i++ )
 ```
 
 I then created two indexes in order to test: 
-- `sknny` which holds the only 2 fields that I would ever want to search on (think of it maybe as `Title` and `Descirption` fields) and who's results would be grabbed from the Application.
+- `sknny` which holds the only 2 fields that I would ever want to search on (think of it maybe as `Title` and `Description` fields) and who's results would be grabbed from the Application.
 - `thick` which holds all 15 fields we will most likely be rendering on the page, only searching really on 2 (Search on `Title, Description` but show `Teaser Image, Path, Link, etc`)
 
 ### The Test ###
