@@ -126,11 +126,11 @@ Ok, so at this point we have a new field with all the applicable `Read` roles st
 ```csharp
 //deep in the bowels of a search service...
 
-var mainPredicate = PredicateBuilder.True<ContentSearchResultItem>();
+var mainPredicate = PredicateBuilder.True<YourSearchResultItem>();
 
 // other predicates like content type filtering, path filtering here....
 
-var accessPredicate = PredicateBuilder.False<ContentSearchResultItem>();
+var accessPredicate = PredicateBuilder.False<YourSearchResultItem>();
 var currentUserRoles = Sitecore.Context.User.Roles.Select(x => x.Name);
 accessPredicate = accessPredicate.Or(a => a.ReadAccess.Contains("Everyone"));
 accessPredicate = accessPredicate.Or(a => a.ReadAccess.Contains("default\\Anonymous"));
