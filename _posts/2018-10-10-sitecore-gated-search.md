@@ -98,7 +98,29 @@ public class CommunityMapping
 }
 ```
 
-Ok, so at this point we have a new field with all the applicable `Read` roles into it, now we need to filter our content by this role (the easy part). I personally love the `PredicateBuilder` so I will use that as an example, but you should be able to massage this into whatever approach you are using as well:
+### The Index Field ###
+
+Add the needed `IndexField` to your `SearchResultItem`:
+
+```csharp
+public class YourSearchResultItem : SearchResultItem
+{
+    //other fields on your search item
+    [IndexField("_read_access")]
+    public IEnumerable<string> ReadAccess { get; set; }
+}
+```
+
+And get the `ComputedField` running on index:
+
+```xml
+<fields hint="raw:AddComputedIndexField">
+    <!-- other computed fields -->
+    <field fieldName="_read_access" returnType="stringCollection">YourSite.Search.ComputedFields.ReadAccessComputedField, YourSite</field>
+</fields>
+```
+
+Ok, so at this point we have a new field with all the applicable `Read` roles stored in it, the field to get us access to it from the `ContentSearch` API, now we need to filter our content by this role (the easy part). I personally love the `PredicateBuilder` so I will use that as an example, but you should be able to massage this into whatever approach you are using as well:
 
 ### The Filter ###
 ```csharp
