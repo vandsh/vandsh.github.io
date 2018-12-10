@@ -2,7 +2,7 @@
 layout: post
 title: "Sitecore Staggered Deploys: Zero Downtime"
 category: Sitecore
-tags: Sitecore CI-CD PowerShell
+tags: [Sitecore, CI-CD, Powershell]
 published: true
 ---
 

@@ -27,7 +27,7 @@
   padding-left: 50px;
   white-space: nowrap;
   overflow:hidden;
-  width: 80%;
+  width: auto;
   display: block;
 }
 
@@ -38,4 +38,13 @@
 .leftimage{
   float: left;
   padding: 5px 10px;
+}
+
+.tagblock,
+.categoryblock{
+  list-style: none;
+  li{
+    list-style: none;
+    padding: 10px 0;
+  }
 }

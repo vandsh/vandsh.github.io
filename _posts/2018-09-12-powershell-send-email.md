@@ -2,7 +2,7 @@
 layout: post
 title: "Powershell Send Email with Attachment"
 category: Powershell
-tags: Powershell SMTP CI/CD
+tags: Powershell SMTP CI-CD
 ---
 
 Whether it's to send an email as part of a build or release workflow, as part of a scheduled task (ie: a report of some kind) or you are simply just trying to test to see if your SMTP service is working (the reason I wrote this, SMTP service was refusing attachments...) sometimes its helpful to have a `Powershell` script to do it for you.  Below is a script that can call an authenticated SMTP service and send an email with an attachment:
