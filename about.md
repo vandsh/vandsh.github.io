@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 Not much to know, name is Steve VandenBush and I have been developing since about 2009.
-Have been in the tech partner/consulting space most of those years (several at my current and awesome company [GeekHive](http://geekhive.com)), but have been in the enterprise world as well. Sitecore, Drupal and Kentico certified.  Enjoy challenging problems and have a knack for troubleshooting. Other interests outside of development are home automation, home security, networking and light robotics.
+Have been in the tech partner/consulting space most of those years, but have been in the enterprise world as well. Sitecore, Drupal and Kentico certified.  Enjoy challenging problems and have a knack for troubleshooting. Other interests outside of development are home automation, home security, networking and light robotics.
 
 ### Feeds
 
