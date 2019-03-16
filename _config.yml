@@ -16,7 +16,7 @@
 title: vandsh - breaker of things
 email: steve.vandenbush@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Steve Vandenbush - Tech Lead at GeekHive. Jack of all trades, master of none? Love all things code. These are just some of my ramblings.
+  Steve Vandenbush - Jack of all trades, master of none? Love all things code. These are just some of my ramblings.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://vandsh.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: vandsh
