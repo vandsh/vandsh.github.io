@@ -3,15 +3,64 @@
 
 @import "{{site.theme}}";
 
+@font-face {
+  font-family: 'FiraCode';
+  font-weight: normal;
+  src: url('/assets/fonts/FiraCode-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/assets/fonts/FiraCode-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/assets/fonts/FiraCode-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'FiraCode';
+  font-weight: bold;
+  src: url('/assets/fonts/FiraCode-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/assets/fonts/FiraCode-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/assets/fonts/FiraCode-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+body{
+  font-family: 'FiraCode'
+}
+
+.site-header{
+  border-top: 0;
+  background-color: #333;
+  border-top: 5px solid #424242;
+  border-bottom: 1px solid #424242;
+  A{
+    color: #eee !important;
+  }
+}
+
+.site-footer{
+  background-color: #333;
+  .footer-heading{
+    color: #eee;
+  }
+}
+
 .page-content{
-  background-image: url(/assets/concrete.jpg);
-  position: relative;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(/assets/344034.png);
+    position: relative;
+    background-color: black;
 
   .wrapper{
     padding-top: 30px;
-    background: #fdfdfd;
+    color: #eee;
+    background: #333;
+    position: relative;
   }
-
+  .glow-toggle{
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    font-size: 10px;
+    cursor: pointer;
+  }
 }
 
 .wrapper{
@@ -29,6 +78,7 @@
   overflow:hidden;
   width: auto;
   display: block;
+  color: #eee;
 }
 
 .site-nav{
@@ -48,3 +98,72 @@
     padding: 10px 0;
   }
 }
+
+
+.highlighter-rouge .highlight{
+  background: #222; 
+
+}
+
+pre, code{
+  background-color: #222;
+}
+
+
+.retro{
+  .site-title{
+    padding-right: 20px;
+  }
+  .site-header A, .footer-heading, .post-list-heading{
+    text-shadow: 0 0 25px #ffffff, 0 0 10px #555577, 0 0 2px #3333cc;
+  }
+  A{
+    text-shadow: 0 0 20px #2a7ae2, 0 0 10px #174889, 0 0 2px #0f3260;
+    &:hover{
+      color: #2e86f7;
+    }
+  }
+  .post-meta, .footer-col-wrapper, .p-name{
+    &.post-title{
+      color: #eee;
+    }
+    color: #aaa;
+    text-shadow: 0 0 20px #777, 0 0 10px #666677, 0 0 2px #222223;
+  }
+
+  .post-content{
+    text-shadow: 0 0 25px #bbb, 0 0 10px #335, 0 0 2px #225;
+  }
+  pre.highlight{
+    .nv
+    {
+      color: #00a3a3;
+      text-shadow: 0 0 25px #008080, 0 0 10px #006363, 0 0 2px #003a3a;
+    }
+    .o, .k
+    {
+      text-shadow: 0 0 15px #888, 0 0 4px #445, 0 0 2px #225;
+    }
+    .nb
+    {
+      color: #009ace;
+      text-shadow: 0 0 25px #0086B3, 0 0 10px #006e93, 0 0 2px #004e68;
+    }
+    .s2, .s1, .se
+    {
+      text-shadow: 0 0 25px #d14, 0 0 10px #c10d3a, 0 0 2px #8e082a;
+      color: #ed1047;
+    } 
+    .c1
+    {
+      text-shadow: 0 0 15px #998, 0 0 5px #5e5e53, 0 0 2px #35352f;
+      color: #adad9c;
+    }
+  }
+  #feed{
+    * {
+      text-shadow: none;
+    }
+  }
+}
+

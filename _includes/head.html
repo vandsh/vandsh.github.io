@@ -43,4 +43,56 @@
   {% if jekyll.environment == 'production' and site.google_analytics %}
   {% include google-analytics.html %}
   {% endif %}
+
+  <script type="text/javascript">
+    function createCookie(cookieName, cookieValue) {
+        document.cookie = cookieName + "=" + cookieValue + ";domain=" + document.location.hostname;
+    }
+    function accessCookie(cookieName) {
+        var name = cookieName + "=";
+        var allCookieArray = document.cookie.split(';');
+        for (var i = 0; i < allCookieArray.length; i++) {
+            var temp = allCookieArray[i].trim();
+            if (temp.indexOf(name) == 0)
+                return temp.substring(name.length, temp.length);
+        }
+        return "";
+    }
+    function checkCookie() {
+        var showRetroGlow = accessCookie("showRetroGlow");
+        if (showRetroGlow == "true") {
+            //add class to html
+            addClass(document.getElementsByTagName("html")[0], "retro")
+        }
+        else{
+            removeClass(document.getElementsByTagName("html")[0], "retro")
+        }
+    }
+
+    function addClass(el, className) {
+        if (el.classList)
+            el.classList.add(className)
+        else if (!hasClass(el, className)) el.className += " " + className
+    }
+
+    function removeClass(el, className) {
+        if (el.classList)
+            el.classList.remove(className)
+        else if (hasClass(el, className)) {
+            var reg = new RegExp('(\\s|^)' + className + '(\\s|$)')
+            el.className = el.className.replace(reg, ' ')
+        }
+    }
+    function toggleGlow(){
+      var showRetroGlow = accessCookie("showRetroGlow");
+        if (showRetroGlow == "true") {
+            createCookie("showRetroGlow", "false")
+        }
+        else{
+            createCookie("showRetroGlow", "true")
+        }
+        checkCookie();
+    }
+    checkCookie();
+</script>
 </head>
