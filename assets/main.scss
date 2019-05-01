@@ -71,6 +71,7 @@ body{
 .wrapper{
   max-width: -webkit-calc(1000px - (30px * 2));
   max-width: calc(1000px - (30px * 2));
+  overflow: hidden;
 }
 
 .site-title{
@@ -89,6 +90,13 @@ body{
 .site-nav{
   z-index: 10;
 }
+
+@media screen and (max-width: 600px){
+ .site-nav{
+     background-color: #000;
+  }
+}
+
 
 .leftimage{
   float: left;
