@@ -109,6 +109,12 @@ pre, code{
   background-color: #222;
 }
 
+A{
+  &:hover{
+      color: #2e86f7;
+    }
+}
+
 
 .retro{
   .site-title{
