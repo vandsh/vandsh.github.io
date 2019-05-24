@@ -66,7 +66,7 @@ public class SwaggerConfig
     }
 }
 ```
-The above snippet is very simple: it leverages the comment `xml` file created on build (`Project Properties -> Build tab -> Xml Documentation File`) and it simply enables the Swagger UI (at https://localhost:XXXXX/swagger/ui/index.html).
+The above snippet is very simple: it leverages the comment `xml` file created on build (`Project Properties -> Build tab -> Xml Documentation File`) and it enables the Swagger UI (at https://localhost:XXXXX/swagger/ui/index.html).
 
 Now, let's create a controller:
 
