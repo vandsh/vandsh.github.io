@@ -39,7 +39,7 @@ That gets us `Swagger` the ability to generate the `myApi.json` doc to use as a 
 Upon including `Swashbuckle` you should now have an `App_Start` folder with a `SwaggerConfig.cs` file in it. Crack it open and you will see an onslaught of goodies that range from allowing Basic/OAuth to including comments at the endpoint level (which we certainly want in this case):
 
 ### SwaggerConfig.cs
-```c-sharp
+```csharp
 public class SwaggerConfig
 {
     public static void Register()
@@ -71,7 +71,7 @@ The above snippet is very simple: it leverages the comment `xml` file created on
 Now, let's create a controller:
 
 ### AccountController.cs
-```c-sharp
+```csharp
 [RoutePrefix("api/Accounts")]
 public class AccountsController : ApiController
 {
@@ -164,7 +164,7 @@ As you can see from the `Command` we are doing a few things here (all documented
 Now that we covered all the flags, below is the custom `ApiClientBase` with inline comments to help you understand why some of the flags were set:
 
 ### ApiClientBase.cs
-```c-sharp
+```csharp
 public abstract class ApiClientBase
 {
     private IHttpContextAccessor _httpContextAccessor;
@@ -218,7 +218,7 @@ public abstract class ApiClientBase
 Creating the `ApiClientBase` above, we are able to vastly simplify the client calls to the API:
 
 ### AccountService.cs
-```c-sharp
+```csharp
 public class AccountService
 {
     private IHttpContextAccessor _httpContextAccessor;
