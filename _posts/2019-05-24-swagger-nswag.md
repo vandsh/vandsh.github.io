@@ -12,13 +12,13 @@ APIs are a great way to write and centralize logic especially if there is any in
 - Documentation of the endpoints
   - What the endpoints actually do, their inputs and ultimately their outputs
 - Invoking and mapping the result of these API calls from within the client framework
-  - This usually let me spinning up a service, hand rolling some type of `HttpClient` call, and then deserializing the data into a proper object
+  - This usually let me spinning up a service, hand rolling some type of `HttpClient` call, and then deserializing the data into proper objects or models
 
 All of that was until I was introduced to [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle) and its counterpart, [Swagger](https://swagger.io/)
 
 Great, a tool that not only defines and helps enforce an API standard (`OpenAPI`) but also facilitates testing it!  That effectively knocks out the first two bullets on my "complaints" list. That last one is kind of a kicker though, but then after digging a little [NSwag](https://github.com/RicoSuter/NSwag) rose to the top. Gamechanger, at least in my book. Not only does it help generate a `.json/.nswag` file that defines the entire API, but it also helps generate correlating classes in `CSharp` or `TypeScript` from that same file. Never thought someone could be excited about working with APIs... but here we are.
 
-We should probably lay the context a little, the high level project is as follows:
+We should probably lay the context a little for our particular scenario, the high level project is as follows:
 
 - An API framework (.Net 4.6ish to leverage some necessary libraries, API App in Azure)
 - A MVC Site that will consume the API (dotnet core Web App in Azure)
