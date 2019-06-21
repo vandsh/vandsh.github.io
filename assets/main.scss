@@ -116,8 +116,20 @@ body{
 .highlighter-rouge .highlight{
   background: #222; 
   .highlight{
+    .nc
+    {
+      color: #596fb2;
+    }
     .nt{
       color: blue;
+    }
+    .nf
+    {
+      color: #b20000;
+    }
+    .s
+    {
+      color: #0095a3;
     }
   }
 }
