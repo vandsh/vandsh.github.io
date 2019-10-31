@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tag Helpers in dotnet MVC"
+title: "Custom Tag Helpers in dotnet MVC"
 category: dotnet
 tags: dotnet MVC ASP.Net
 ---
