@@ -100,6 +100,19 @@ A quick unpacking of the above:
  - override the `ProcessAsync` method to do your thing
    - `output.SuppressOutput()` is the magic that hides this from ever being rendered
 
+The last thing we need to do before we actually use this in markup is to register it in the `_ViewImports.cshtml`:
+## ViewImports.cshtml
+```csharp
+@using YourNamespace
+@using StackExchange.Profiling
+@addTagHelper *, MiniProfiler.AspNetCore.Mvc
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, SmartBreadcrumbs
+@addTagHelper *, YourNamespace.Helpers
+```
+
+Yes, I know, there are a few other `tag helpers` registered, but for good reason: I love to keep the profiler on my local/dev/test instances as a sanity check, and the `SmartBreadcrumbs` is handy for generating a breadcrumb nav by `controller` and `action` auto-magically..
+
 ## SomeMarkup.cshtml
 
 ```html
