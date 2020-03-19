@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Bridge: YAML CI for Kentico"
-category: kentico
+category: Kentico
 tags: Kentico Deploy CI-CD
 image: /assets/bridgelogo.png
 ---
