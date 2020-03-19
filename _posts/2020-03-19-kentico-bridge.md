@@ -14,6 +14,8 @@ Let me introduce to you `Bridge` for Kentico!
 
 # -|--|- Bridge
 
+[Github Repository](https://github.com/vandsh/bridge)
+
 ![alt text](/assets/bridgescreenshot.png "Bridge Screenshot")
 
 ## The what? 
@@ -81,6 +83,7 @@ Let me introduce to you `Bridge` for Kentico!
      - Smaller file footprint: I didn't need all of the wrapper XML nodes.
  - Future plans?
      - Please feel free to hit me up if you like the tool but are having issues or would like to see any new features
+     - If you feel inclined to contribute, forks and pull requests are always welcomed.
      - One thing I have already kinda planned for is allowing for multi-site configs, allowing you to handle different sites all within one GUI.
      - I have also considered abstracting out the Kentico libraries and making this into a tool that could handle a raw database as well, time will tell.
 
