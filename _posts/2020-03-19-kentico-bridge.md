@@ -3,6 +3,7 @@ layout: post
 title: "Bridge: YAML CI for Kentico"
 category: kentico
 tags: Kentico Deploy CI-CD
+image: /assets/bridgelogo.png
 ---
 
 Having worked in Kentico for a while, something that keeps coming up in the back of my mind is: why hasn't someone developed a friendly tool to manage the database items? I was looking for something using YAML so it's easy to merge and use in source control, completely free and open-source, config driven and (last but not least) able to be leveraged in a dev-ops workflow.
