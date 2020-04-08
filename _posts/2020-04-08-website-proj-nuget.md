@@ -2,7 +2,7 @@
 layout: post
 title: "NuGet for Website Projects"
 category: dotnet
-tags: dotnet NuGet CI-CD
+tags: dotnet NuGet CI-CD Powershell
 ---
 
 ### The Problem
