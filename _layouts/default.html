@@ -9,13 +9,14 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="glow-toggle" onclick="toggleGlow();">Toggle Glow</div>
+        <div class="glow-toggle" onclick="toggleGlow();">CRT</div>
         {{ content }}
+	<span class="blinking-cursor">&#10074;</span>
       </div>
     </main>
 
     {%- include footer.html -%}
-
+    <div class="scan-line"></div>
   </body>
 
 </html>
