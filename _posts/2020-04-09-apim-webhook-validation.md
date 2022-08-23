@@ -63,3 +63,5 @@ If we know that, we can
 Thru the variables and then the `choose/when` condition, we can short circuit any invalid signatures before going any further and in the event it _is valid_, the body of the original request will continue to the `backend-service` url for further processing. In this case it was a repository that handled resource orchestration on an internal network (Ansible, Puppet or Chef I don't recall which). 
 
 This is just one of many ways that `Azure APIM` can prove it's power and flexibility!
+
+PS: Anyone looking for a way to "sanity check" or simply test the validation logic of the policy, check out the [Postman collection here](https://www.postman.com/vandsh/workspace/dev-blog-examples/collection/2227242-d6ae589f-9059-4b5a-a5b3-ef0b395853b6?action=share&creator=2227242). Before anything, swap out the `baseurl`, `apimsubscriptionkey` and `secret` Collection variables to meet your needs. Then, swing over to the `Pre-request Scripts` to see exactly how the entire signature is generated.
