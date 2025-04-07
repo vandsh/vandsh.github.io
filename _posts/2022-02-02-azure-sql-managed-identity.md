@@ -56,7 +56,8 @@ Or if you rather `Sql Server Management Studio`:
 Regardless, you need to execute the following Sql:
 
 ```sql
-CREATE USER [your-app-service] FROM EXTERNAL PROVIDER
+-- WITH OBJECT_ID only needed if you have names not unique between app services and app registrations.
+CREATE USER [your-app-service] FROM EXTERNAL PROVIDER WITH OBJECT_ID = 'a290ccc0-6142-4ff6-9620-7ea2393e6ed2';
 
 ALTER ROLE db_datareader ADD MEMBER [your-app-service];
 ALTER ROLE db_datawriter ADD MEMBER [your-app-service];
