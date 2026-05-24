@@ -171,7 +171,7 @@ Cut **32.0 inches** of solid-core copper wire. Attach it to **GPIO 4 (Pin 7)**. 
 
 That length is not arbitrary: it's exactly 1/4 wavelength for 87.6 MHz. This minimizes VSWR reflection and maximizes your range. You've effectively built a tuned monopole antenna out of a piece of wire you probably had in a junk drawer.
 
-Tune any FM radio to 87.6 MHz. :musical_note:
+Tune any FM radio to 87.6 MHz (this is modifiable in the `pifm-broadcast.sh` script).
 
 ## Fire It Up
 
@@ -198,6 +198,8 @@ Three things that will save you hours of debug suffering:
 2. Big ALSA buffers (`--period-size=1024 --buffer-size=8192`). Give the pipeline room to breathe.
 3. Disable WiFi power saving. Or your stream dies when you stop staring at it.
 
+This all goes without saying, please lookup your local unlicensed radio transmission guidelines for what is permissible.
+
 The hardware cost is somewhere around $10-15 for the Pi Zero 2W and a piece of wire. The time cost is whatever rabbit holes you fell into. Totally worth it.
 
-Happy Broadcasting. :radio:
+Happy Broadcasting.
