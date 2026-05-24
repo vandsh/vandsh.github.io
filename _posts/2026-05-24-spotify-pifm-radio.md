@@ -21,7 +21,7 @@ It works. It genuinely works. And it will absolutely drive you insane before it 
 - [**`PiFmAdv`**](https://github.com/miegl/PiFmAdv): The absolute madlad software that turns a GPIO pin into an FM transmitter. Perfectly legal at low power for personal use. Don't ask me about higher power.
 - **ALSA Loopback**: A virtual audio device that lets `spotifyd` play into one end and `PiFmAdv` read out the other. The audio pipe that holds this whole thing together.
 
-## Spotifyd: Headless Spotify Without the Self-Harm
+## Spotifyd: Headless Spotify Without Questioning Sanity
 
 Spotifyd is written in Rust. You could compile it from source on a Pi Zero 2W. You could also watch paint dry while your CPU screams. Don't do that. Just head to the [spotifyd releases page](https://github.com/Spotifyd/spotifyd/releases) and grab the pre-built ARM binary. Drop it in place and move on with your life:
 
@@ -82,7 +82,7 @@ If `make` explodes, you probably need:
 sudo apt install -y libsndfile1-dev gcc make git alsa-utils
 ```
 
-The compiled binary lives at `/home/pi/PiFmAdv/src/pi_fm_adv` — that's the path your service points at, so don't move it.
+The compiled binary lives at `/home/pi/PiFmAdv/src/pi_fm_adv`, that's the path your service points at, so don't move it.
 
 ## ALSA Loopback: The Invisible Pipe That Keeps It All Together
 
