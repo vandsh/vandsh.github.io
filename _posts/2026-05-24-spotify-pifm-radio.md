@@ -7,7 +7,9 @@ tags: raspberry-pi spotify linux audio fm radio
 
 So you want to play your Spotify playlists over an actual FM radio frequency. Not because it's practical (it's objectively not) but because you looked at a $6 Raspberry Pi Zero 2W and thought, "yeah, that should be a radio tower."
 
-Welcome. You're here now. Let's get through this together.
+That or you are a collector of antique radios from garbage bins, estate sales, looting and other questionable choices and they litter your house like the those creepy porcelain dolls your grandmother had all over just _begging_ for a purpose.
+
+Plee the former and welcome, you're here now. Let's get through this together.
 
 ## The Pitch
 
